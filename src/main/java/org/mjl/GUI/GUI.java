@@ -11,11 +11,19 @@ public class GUI  {
         label.setText("Bro, do you even code");
         label.setIcon(image);
         label.setHorizontalTextPosition(JLabel.CENTER);
+        label.setVerticalTextPosition(JLabel.TOP);
+//        label.setBounds(0,0,300,200);
 
 
         MyFrame myFrame = new MyFrame();
 
+
+
+
+
+
         myFrame.add(label);
+        myFrame.pack();
 
 
 

@@ -17,16 +17,18 @@ public class Main {
         
         List<Station> allStations = StationLoader.getAllStations();
 
-        mainProcess(allStations);
+        Station station1 = allStations.get(0);
 
-        GUI gui = new GUI();
+        List<Show> chosenShows = processTheStation(station1);
+
+
 
 
 
     }
 
-    private static void mainProcess(List<Station> allStations) throws IOException {
-        String url = allStations.get(1).url;
+    private static List<Show> processTheStation(Station station) throws IOException {
+        String url = station.getUrl();
 
         Document doc = Scraper.getDocument(url);
 
@@ -44,12 +46,14 @@ public class Main {
             String link = s.select("a[href]").attr("href");
             String genre = s.select(".genre").text();
             String title = s.select(".detail > a").text();
+            String description = s.select("p").next().text();
             
             Show show = new Show();
             show.setTimeOfBeginning(time);
             show.setLink("https://www.teleman.pl" + link);
             show.setGenre(genre);
             show.setTitle(title);
+            show.setDescription(description);
             
             listOfShows.add(show);
         }
@@ -59,7 +63,9 @@ public class Main {
                 .collect(Collectors.toList());
 
 
-        showsAfterFiltering.stream().forEach(System.out::println);
+//        showsAfterFiltering.stream().forEach(System.out::println);
+        return showsAfterFiltering;
+
     }
 
 
