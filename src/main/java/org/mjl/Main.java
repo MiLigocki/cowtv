@@ -17,10 +17,10 @@ public class Main {
         
         List<Station> allStations = StationLoader.getAllStations();
 
-        Station station1 = allStations.get(0);
+        Station chosenStation = allStations.get(0);
 
-        List<Show> chosenShows = processTheStation(station1);
-
+        List<Show> chosenShows = processTheStation(chosenStation);
+        MyPrinter.printTheShows(chosenShows, chosenStation);
 
 
 
