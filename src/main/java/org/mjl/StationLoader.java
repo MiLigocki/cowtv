@@ -5,8 +5,8 @@ import java.util.List;
 
 public class StationLoader {
 
-
-    public static List<Station> getAllStations(){
+    List<Station> allStations = new ArrayList<>();
+    public StationLoader(){
 
         Station kultura = new Station("https://www.teleman.pl/program-tv/stacje/TVP-Kultura", "TVP Kultura");
         Station tvn = new Station("https://www.teleman.pl/program-tv/stacje/TVN", "TVN");
@@ -17,8 +17,6 @@ public class StationLoader {
         Station cinemax2 = new Station("https://www.teleman.pl/program-tv/stacje/Cinemax2", "Cinemax 2");
         Station stopklatka = new Station("https://www.teleman.pl/program-tv/stacje/Stopklatka-TV","Stopklatka");
 
-
-        List<Station> allStations = new ArrayList<>();
         allStations.add(kultura);
         allStations.add(tvn);
         allStations.add(polsat);
@@ -28,8 +26,10 @@ public class StationLoader {
         allStations.add(cinemax2);
         allStations.add(stopklatka);
 
-        return allStations;
+    }
 
+    public List<Station> getAllStations() {
+        return allStations;
     }
 
 }
