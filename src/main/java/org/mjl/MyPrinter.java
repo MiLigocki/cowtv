@@ -7,7 +7,7 @@ import java.util.List;
 
 public class MyPrinter {
 
-    public static void printTheShows(List<Show> showList, Station station) throws IOException {
+    public static void printTheShowsToFile(List<Show> showList, Station station) throws IOException {
 
 
         String stationName = station.getName();
@@ -27,9 +27,9 @@ public class MyPrinter {
             String link = currentShow.getLink();
 
 
-            writer.write(time + " – " + title);
+            writer.write(time + " – " + title + "– (" + genre + ")");
             writer.newLine();
-            writer.write("(" + genre + ") – " + description);
+            writer.write(description);
             writer.newLine();
             writer.newLine();
 
@@ -45,5 +45,28 @@ public class MyPrinter {
 
 
 
+    }
+
+    public static String printTheShowsToHugeString (List<Show> showList, Station station) {
+
+        StringBuilder sb = new StringBuilder();
+
+        for(int i = 0; i < showList.size(); i++) {
+            Show currentShow = showList.get(i);
+            String time = currentShow.getTimeOfBeginning();
+            String genre = currentShow.getGenre();
+            String title = currentShow.getTitle();
+            String description = currentShow.getDescription();
+            String link = currentShow.getLink();
+
+
+            sb.append(time + " – " + title + " – (" + genre + ")");
+            sb.append(System.lineSeparator());
+            sb.append(description);
+            sb.append(System.lineSeparator());
+            sb.append(System.lineSeparator());
+        }
+
+        return sb.toString();
     }
 }

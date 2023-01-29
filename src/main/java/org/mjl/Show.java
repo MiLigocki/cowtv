@@ -55,7 +55,7 @@ public class Show {
     public void setDescription(String description) {
         this.description = description;
     }
-    public String getTimeOfBeginning() {
+    public String getTimeOfBeginning()   {
         return timeOfBeginning;
     }
 
@@ -65,3 +65,4 @@ public class Show {
 
 
 }
+

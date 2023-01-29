@@ -20,7 +20,8 @@ public class Main {
         Station chosenStation = allStations.get(0);
 
         List<Show> chosenShows = processTheStation(chosenStation);
-        MyPrinter.printTheShows(chosenShows, chosenStation);
+        String hugeString = MyPrinter.printTheShowsToHugeString(chosenShows, chosenStation);
+        System.out.println(hugeString);
 
 
 
