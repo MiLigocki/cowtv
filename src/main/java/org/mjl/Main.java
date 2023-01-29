@@ -12,6 +12,9 @@ public class Main {
         StationLoader stationLoader = new StationLoader();
         List<Station> allStations = stationLoader.getAllStations();
 
+
+
+
         Station chosenStation = allStations.get(0);
 
 
