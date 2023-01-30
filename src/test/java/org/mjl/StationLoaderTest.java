@@ -18,6 +18,17 @@ class StationLoaderTest {
         assertEquals(kultura, "TVP Kultura");
     }
 
+    @Test
+    void last_station_is_stopklatka() {
+        StationLoader sl = new StationLoader();
+        List<Station> stationList = sl.getAllStations();
+
+        int index = stationList.size()-1;
+        assertEquals(stationList.get(index).getName(), "Stopklatka");
+    }
+
+
+
 
 
 

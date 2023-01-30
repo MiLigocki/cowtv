@@ -13,8 +13,6 @@ public class Main {
         List<Station> allStations = stationLoader.getAllStations();
 
 
-
-
         Station chosenStation = allStations.get(0);
 
 
