@@ -16,27 +16,24 @@ public class StationLoader {
             new Station("https://www.teleman.pl/program-tv/stacje/Stopklatka-TV","Stopklatka"));
 
     public StationLoader(){
-//        Station kultura = new Station("https://www.teleman.pl/program-tv/stacje/TVP-Kultura", "TVP Kultura");
-//        Station tvn = new Station("https://www.teleman.pl/program-tv/stacje/TVN", "TVN");
-//        Station polsat = new Station("https://www.teleman.pl/program-tv/stacje/Polsat", "Polsat");
-//        Station tvn7 = new Station("https://www.teleman.pl/program-tv/stacje/TVN-Siedem","TVN 7");
-//        Station tvPuls = new Station("https://www.teleman.pl/program-tv/stacje/Puls", "TV Puls");
-//        Station cinemax = new Station("https://www.teleman.pl/program-tv/stacje/Cinemax", "Cinemax");
-//        Station cinemax2 = new Station("https://www.teleman.pl/program-tv/stacje/Cinemax2", "Cinemax 2");
-//        Station stopklatka = new Station("https://www.teleman.pl/program-tv/stacje/Stopklatka-TV","Stopklatka");
 
-//        allStations.add(kultura);
-//        allStations.add(tvn);
-//        allStations.add(polsat);
-//        allStations.add(tvn7);
-//        allStations.add(tvPuls);
-//        allStations.add(cinemax);
-//        allStations.add(cinemax2);
-//        allStations.add(stopklatka);
     }
 
     public List<Station> getAllStations() {
         return allStations;
+    }
+
+    public void printPrompt() {
+        System.out.println("Please choose a number.");
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i< allStations.size(); i++) {
+            String currentStation = i + ": " + allStations.get(i).getName();
+            sb.append(currentStation).append("\n");
+        }
+
+        String output = sb.toString();
+        System.out.println(output);
     }
 
 }
