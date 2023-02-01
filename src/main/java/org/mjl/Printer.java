@@ -27,7 +27,7 @@ public class Printer {
             String link = currentShow.getLink();
 
 
-            writer.write(time + " – " + title + "– (" + genre + ")");
+            writer.write(time + " - " + title + " - (" + genre + ")");
             writer.newLine();
             writer.write(description);
             writer.newLine();
