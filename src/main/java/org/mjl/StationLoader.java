@@ -1,6 +1,5 @@
 package org.mjl;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,17 +22,17 @@ public class StationLoader {
         return allStations;
     }
 
-    public void printPrompt() {
-        System.out.println("Please choose a number.");
+    public void chooseStationPrompt() {
+
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i< allStations.size(); i++) {
             String currentStation = i + ": " + allStations.get(i).getName();
             sb.append(currentStation).append("\n");
         }
-
         String output = sb.toString();
         System.out.println(output);
+
     }
 
 }

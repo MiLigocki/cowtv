@@ -1,14 +1,13 @@
 package org.mjl;
 
 public class Station {
-    String url;
+    private String url;
+    private String name;
 
     public Station(String url, String name) {
         this.url = url;
         this.name = name;
     }
-
-    String name;
 
     public String getUrl() {
         return url;

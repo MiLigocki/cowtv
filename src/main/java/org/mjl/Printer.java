@@ -11,7 +11,7 @@ public class Printer {
 
 
         String stationName = station.getName();
-        String fileName = stationName + ".txt";
+        String fileName = stationName.replace(" ", "") + ".txt";
 
         BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
         writer.write(stationName.toUpperCase());
