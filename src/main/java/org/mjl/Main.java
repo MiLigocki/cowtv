@@ -15,7 +15,6 @@ public class Main {
 
         stationLoader.chooseStationPrompt();
 
-        
         int index;
         int maxSize = allStations.size() - 1;
 
@@ -30,16 +29,13 @@ public class Main {
 
 
         Station chosenStation = allStations.get(index);
+
         List<Show> chosenShows = StationProcessor.stationToListOfShows(chosenStation);
 
         String hugeString = Printer.printTheShowsToHugeString(chosenShows, chosenStation);
         System.out.println(hugeString);
 
-
-
     }
-
-
 
 
 }
