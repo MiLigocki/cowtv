@@ -22,9 +22,7 @@ public class StationProcessor {
         Element stationItems = stationListing.getElementsByClass("stationItems").first();
         Elements shows = stationItems.getElementsByTag("li");
 
-
         List<Show> listOfShows = new ArrayList<>();
-
 
         for (Element s : shows) {
 
@@ -48,8 +46,6 @@ public class StationProcessor {
                 .filter(e -> !e.getTimeOfBeginning().equals(""))
                 .collect(Collectors.toList());
 
-
-//        showsAfterFiltering.stream().forEach(System.out::println);
         return showsAfterFiltering;
 
     }

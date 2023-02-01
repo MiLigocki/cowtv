@@ -26,25 +26,13 @@ public class Printer {
             String description = currentShow.getDescription();
             String link = currentShow.getLink();
 
-
             writer.write(time + " - " + title + " - (" + genre + ")");
             writer.newLine();
             writer.write(description);
             writer.newLine();
             writer.newLine();
-
-
-
-
-
-
         }
-
         writer.close();
-
-
-
-
     }
 
     public static String printTheShowsToHugeString (List<Show> showList, Station station) {

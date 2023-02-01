@@ -15,7 +15,6 @@ public class StationLoader {
             new Station("https://www.teleman.pl/program-tv/stacje/Stopklatka-TV","Stopklatka"));
 
     public StationLoader(){
-
     }
 
     public List<Station> getAllStations() {
