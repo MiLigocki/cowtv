@@ -11,8 +11,6 @@ public class Main {
         StationLoader stationLoader = new StationLoader();
         List<Station> allStations = stationLoader.getAllStations();
 
-
-
         stationLoader.chooseStationPrompt();
 
         int index;
@@ -32,6 +30,13 @@ public class Main {
         List<Show> chosenShows = StationProcessor.stationToListOfShows(chosenStation);
         String hugeString = Printer.printTheShowsToHugeString(chosenShows, chosenStation);
         System.out.println(hugeString);
+        
+        System.out.println("Do you want to create a text file with this information?");
+        if(sc.next().toLowerCase().contains("y")){
+            Printer.printTheShowsToFile(chosenShows, chosenStation);
+        } else {
+            System.exit(0);
+        }
     }
 
 
